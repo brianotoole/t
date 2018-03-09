@@ -1,0 +1,12 @@
+$black: #111;
+
+body {
+  background: $black;
+  columns: 200px 2;
+}
+
+.box {
+  a {
+    color: blue;
+  }
+}
