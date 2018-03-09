@@ -350,6 +350,22 @@ img {
   height: auto;
 }
 
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.page-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+
+.page-section--primary {
+    color: #fff;
+    background-color: #32bca0;
+  }
+
 .btn {
   display: inline-block;
   padding: 0.625rem 1.25rem;

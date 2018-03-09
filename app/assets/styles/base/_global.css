@@ -5,3 +5,18 @@ img {
   width: 100%;
   height: auto;
 }
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.page-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
+  &--primary {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+
+}
