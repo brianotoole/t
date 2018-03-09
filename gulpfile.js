@@ -4,6 +4,8 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var css_vars = require('postcss-simple-vars');
 var css_nested = require('postcss-nested');
+var css_import = require('postcss-import');
+var css_pxtorem = require('postcss-pxtorem');
 
 gulp.task('html', function() {
   //
@@ -11,7 +13,7 @@ gulp.task('html', function() {
 
 gulp.task('styles', function() {
   return gulp.src('./app/assets/styles/style.css')
-    .pipe(postcss([css_vars, css_nested, autoprefixer]))
+    .pipe(postcss([css_import, css_vars, css_nested, css_pxtorem, autoprefixer]))
     .pipe(gulp.dest('./app/temp/styles'));
 });
 

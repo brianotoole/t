@@ -1,12 +1,5 @@
-$black: #111;
 
-body {
-  background: $black;
-  columns: 200px 2;
-}
-
-.box {
-  a {
-    color: blue;
-  }
-}
+@import "normalize.css";
+@import "base/_variables";
+@import "base/_global";
+@import "modules/_hero";

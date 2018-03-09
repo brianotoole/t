@@ -1,0 +1,26 @@
+.hero {
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 60px; 
+    color: $color-white;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-weight: 100;
+    font-size: 30px;
+    margin: 0;
+  }
+
+}
