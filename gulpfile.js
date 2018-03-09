@@ -7,7 +7,8 @@ var css_vars = require('postcss-simple-vars');
 var css_nested = require('postcss-nested');
 var css_import = require('postcss-import');
 var css_pxtorem = require('postcss-pxtorem');
-var css_color = require('postcss-color-function')
+var css_color = require('postcss-color-function');
+var css_mixins = require('postcss-mixins');
 
 var css_pxtorem_options = {
   propList: ['font', 'font-size', 'line-height', 'padding', 'margin'],
@@ -22,7 +23,7 @@ gulp.task('html', function() {
 // TASK "styles"
 gulp.task('styles', function() {
   return gulp.src('./app/assets/styles/style.css')
-    .pipe(postcss([css_import, css_vars, css_nested, css_pxtorem, css_color, autoprefixer]))
+    .pipe(postcss([css_import, css_mixins, css_vars, css_nested, css_pxtorem, css_color, autoprefixer]))
     .on('error', function(errorInfo) {
       console.log(errorInfo.toString());
       this.emit('end');

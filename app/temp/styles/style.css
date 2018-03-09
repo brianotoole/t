@@ -390,6 +390,10 @@ img {
 
 }
 
+.hero__image {
+    height: 500px;
+  }
+
 .hero__content {
     position: absolute;
     top: 50%;
@@ -402,13 +406,27 @@ img {
 
 .hero__title {
     font-weight: 300;
-    font-size: 3.75rem; 
+    font-size: 1.875rem; 
     color: #fff;
     margin: 0;
   }
 
+@media (min-width: 50rem) {
+
+.hero__title {
+      font-size: 3.75rem
+  }
+  }
+
 .hero__subtitle {
     font-weight: 100;
-    font-size: 1.875rem;
+    font-size: 1.25rem;
     margin: 0;
+  }
+
+@media (min-width: 50rem) {
+
+.hero__subtitle {
+      font-size: 1.875rem
+  }
   }

@@ -1,6 +1,10 @@
 .hero {
   position: relative;
 
+  &__image {
+    height: 500px;
+  }
+
   &__content {
     position: absolute;
     top: 50%;
@@ -12,15 +16,21 @@
 
   &__title {
     font-weight: 300;
-    font-size: 60px; 
+    font-size: 30px; 
     color: $color-white;
     margin: 0;
+    @mixin bp_md {
+      font-size: 60px;
+    }
   }
 
   &__subtitle {
     font-weight: 100;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0;
+    @mixin bp_md {
+      font-size: 30px;
+    }
   }
 
 }
