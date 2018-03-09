@@ -350,6 +350,41 @@ img {
   height: auto;
 }
 
+.btn {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #32bca0;
+  text-decoration: none;
+  transition: all 0.2s linear;
+
+}
+
+.btn--secondary {
+    background-color: #f27558;
+  }
+
+.btn--secondary:hover, .btn--secondary:focus {
+      background-color: rgb(218, 105, 79);
+    }
+
+.btn--transparent {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #32bca0;
+  }
+
+.btn--transparent:hover, .btn--transparent:focus {
+      background-color: #32bca0;
+      border-color: rgb(45, 169, 144);
+    }
+
+.btn--large {
+    padding: 0.9375rem 1.5625rem;
+    font-size: 1.125rem;
+  }
+
 .hero {
   position: relative;
 

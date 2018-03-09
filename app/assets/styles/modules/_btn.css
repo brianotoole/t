@@ -1,0 +1,32 @@
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: $color-white;
+  background-color: $color-primary;
+  text-decoration: none;
+  transition: all 0.2s linear;
+
+  &--secondary {
+    background-color: $color-secondary;
+    &:hover, &:focus {
+      background-color: color($color-secondary shade(10%));
+    }
+  }
+
+  &--transparent {
+    color: $color-white;
+    background-color: transparent;
+    border: 2px solid $color-primary;
+    &:hover, &:focus {
+      background-color: $color-primary;
+      border-color: color($color-primary shade(10%));
+    }
+  }
+
+  &--large {
+    padding: 15px 25px;
+    font-size: 18px;
+  }
+
+}
