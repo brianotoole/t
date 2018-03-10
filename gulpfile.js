@@ -11,7 +11,7 @@ var css_color = require('postcss-color-function');
 var css_mixins = require('postcss-mixins');
 
 var css_pxtorem_options = {
-  propList: ['font', 'font-size', 'line-height', 'padding', 'margin'],
+  propList: ['font', 'font-size', 'padding', 'margin'],
   mediaQuery: true,
 };
 var css_pxtorem = css_pxtorem(css_pxtorem_options);
