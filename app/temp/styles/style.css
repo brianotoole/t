@@ -484,6 +484,83 @@ img {
     font-size: 1.125rem;
   }
 
+.header {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  padding: 0.625rem 0;
+  background-color: #32bca0;
+  z-index: 2;
+
+}
+
+.header__btn-container {
+    float: right;
+  }
+
+.header__logo {
+    position: absolute;
+    top: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 3.75rem;
+  }
+
+.header__menu-content {
+    display: none;
+  }
+
+@media (min-width: 50rem) {
+
+.header__menu-content {
+      display: block
+  }
+  }
+
+.header__menu-icon {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+
+@media (min-width: 50rem) {
+
+.header__menu-icon {
+      display: none
+  }
+  }
+
+.nav-primary--pull-right {
+    float: right;
+  }
+
+.nav-primary ul {
+    margin: 0;
+    padding: 0;
+  }
+
+.nav-primary ul:after {
+      clear: left;
+      display: table;
+    }
+
+.nav-primary li {
+    list-style-type: none;
+    float: left;
+    padding-right: 20px;
+  }
+
+.nav-primary a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 0.75rem 0;
+  }
+
 .hero {
   position: relative;
   height: 500px;
