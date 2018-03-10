@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var watch = require('gulp-watch');
 var browsersync = require('browser-sync').create();
+var webpack = require('webpack');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var css_vars = require('postcss-simple-vars');
@@ -20,7 +21,7 @@ gulp.task('html', function() {
   //
 });
 
-// TASK "styles"
+// TASK: "styles"
 gulp.task('styles', function() {
   return gulp.src('./app/assets/styles/style.css')
     .pipe(postcss([css_import, css_mixins, css_vars, css_nested, css_pxtorem, css_color, autoprefixer]))
@@ -31,8 +32,14 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./app/temp/styles'));
 });
 
+// TASK: "scripts"
+gulp.task('scripts', function(callback) {
+  webpack(require('./webpack.config.js'), function() {
+    callback();
+  });
+});
 
-// TASK: "gulp watch"
+// TASK: "watch"
 gulp.task('watch', function() {
   // init browsersync
   browsersync.init({
@@ -49,10 +56,20 @@ gulp.task('watch', function() {
   watch('./app/assets/styles/**/*.css', function() {
     gulp.start('css-inject');
   });
+  // trigger "scripts" on save of js files
+  watch('./app/assets/scripts/**/*.js', function() {
+    gulp.start('scriptsRefresh');
+  });
 });
 
-// TASK "css-inject"
+// TASK: "css-inject"
 gulp.task('css-inject', ['styles'], function() {
   return gulp.src('./app/temp/styles/style.css')
     .pipe(browsersync.stream());
+});
+
+// TASK: "scriptsRefresh"
+// tell browsersync to reload page after webpack bundle is generated
+gulp.task('scriptsRefresh', ['scripts'], function() {
+  browsersync.reload();
 });
