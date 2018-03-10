@@ -1,8 +1,9 @@
 .hero {
   position: relative;
+  height: 500px;
 
   &__image {
-    height: 500px;
+    height: 100%;
   }
 
   &__content {
