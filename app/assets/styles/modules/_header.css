@@ -5,7 +5,14 @@
   padding: 10px 0;
   background-color: $color-primary;
   z-index: 2;
-  transition: background-color 0.4s ease-out;
+  transition: all 0.4s ease-out;
+
+  &--is-fixed {
+    @mixin bp_md {
+      position: fixed;
+      background-color: color($color-primary shade(20%));
+    }
+  }
 
   &--is-open {
     height: 100vh;

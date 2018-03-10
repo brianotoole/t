@@ -371,10 +371,13 @@ img {
 .page-section {
   padding-top: 30px;
   padding-bottom: 30px;
+  height: 2000px;
 
 }
 
-.page-section--primary {
+//testing only
+  
+  .page-section--primary {
     color: #fff;
     background-color: #32bca0;
   }
@@ -491,9 +494,17 @@ img {
   padding: 0.625rem 0;
   background-color: #32bca0;
   z-index: 2;
-  transition: background-color 0.4s ease-out;
+  transition: all 0.4s ease-out;
 
 }
+
+@media (min-width: 50rem) {
+
+.header--is-fixed {
+      position: fixed;
+      background-color: rgb(40, 150, 128)
+  }
+  }
 
 .header--is-open {
     height: 100vh;

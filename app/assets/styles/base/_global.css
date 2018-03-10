@@ -25,6 +25,7 @@ img {
 .page-section {
   padding-top: 30px;
   padding-bottom: 30px;
+  height: 2000px; //testing only
   
   &--primary {
     color: $color-white;
