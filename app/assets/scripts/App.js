@@ -1,5 +1,3 @@
-var $ = require('jquery');
+import MobileMenu from './modules/MobileMenu';
 
-$(document).ready(function() {
-  console.log('test webpack load thru gulp');
-});
+var mobileMenu = new MobileMenu();
